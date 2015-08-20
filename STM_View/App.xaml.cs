@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using STM_View.Properties;
 
 namespace STM_View
@@ -8,6 +9,17 @@ namespace STM_View
     /// </summary>
     public partial class App
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            if (DateTime.Now >= new DateTime(2015, 10, 07, 19, 00, 00))
+            {
+                Current.Shutdown();
+                return;
+            }
+
+            base.OnStartup(e);
+        }
+
         protected override void OnExit(ExitEventArgs e)
         {
             Settings.Default.Save();

@@ -10,6 +10,7 @@
         Title="MainWindow" Height="700" Width="1300" d:DataContext="{d:DesignInstance local:MainWindow}">
     <Controls:MetroWindow.LeftWindowCommands>
         <Controls:WindowCommands>
+            <Image Source="newlogo.ico" Margin="10,0,0,0"/>
             <Button Click="LaunchOnGitHub"
                     ToolTip="TimepadEvents on GitHub">
                 <Rectangle Width="22"
